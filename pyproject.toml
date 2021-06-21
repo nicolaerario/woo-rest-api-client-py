@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "woo-rest-api-client-py"
+version = "0.1.0"
+description = "Python client for Woocommerce Rest Api"
+authors = ["Nicola Erario <nicola.erario@gmail.com>"]
+license = "GNU GPLv3"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+WooCommerce = "^3.0.0"
+environs = "^9.3.2"
+
+[tool.poetry.dev-dependencies]
+black = "^21.6b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
