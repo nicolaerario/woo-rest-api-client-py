@@ -9,6 +9,7 @@ license = "GNU GPLv3"
 python = "^3.9"
 WooCommerce = "^3.0.0"
 environs = "^9.3.2"
+typer = "^0.3.2"
 
 [tool.poetry.dev-dependencies]
 black = "^21.6b0"
