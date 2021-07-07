@@ -13,9 +13,9 @@ environs==9.3.2; python_version >= "3.6" \
 idna==2.10; python_version >= "3.6" and python_full_version < "3.0.0" or python_full_version >= "3.5.0" and python_version >= "3.6" \
     --hash=sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0 \
     --hash=sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6
-marshmallow==3.12.1; python_version >= "3.6" \
-    --hash=sha256:b45cde981d1835145257b4a3c5cb7b80786dcf5f50dd2990749a50c16cb48e01 \
-    --hash=sha256:8050475b70470cc58f4441ee92375db611792ba39ca1ad41d39cad193ea9e040
+marshmallow==3.12.2; python_version >= "3.6" \
+    --hash=sha256:d4090ca9a36cd129126ad8b10c3982c47d4644a6e3ccb20534b512badce95f35 \
+    --hash=sha256:77368dfedad93c3a041cbbdbce0b33fac1d8608c9e2e2288408a43ce3493d2ff
 python-dotenv==0.18.0; python_version >= "3.6" \
     --hash=sha256:effaac3c1e58d89b3ccb4d04a40dc7ad6e0275fda25fd75ae9d323e2465e202d \
     --hash=sha256:dd8fe852847f4fbfadabf6183ddd4c824a9651f02d51714fa075c95561959c7d
