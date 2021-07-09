@@ -24,6 +24,25 @@ defaultDate = date.today().strftime("%Y-%m-%dT00:00:00")
 
 
 @cli.command()
+def status():
+    response = wcapi.get("system_status").json()
+
+    woo_version = response["environment"]["version"]
+    wp_version = response["environment"]["wp_version"]
+    php_version = response["environment"]["php_version"]
+    remote_get_successful = response["environment"]["remote_get_successful"]
+
+    typer.echo(
+        f"""
+    Woocommerce version:    {woo_version}
+    Wordpress version:      {wp_version}
+    PHP version:            {php_version}
+    Get Request:            {'OK' if remote_get_successful else 'BAD'}
+    """
+    )
+
+
+@cli.command()
 def shipToCsv(date: str = defaultDate, status: str = "processing"):
     try:
 
