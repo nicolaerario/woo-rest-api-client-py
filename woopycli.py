@@ -95,8 +95,9 @@ def shipToCsv(date: str = defaultDate, status: str = "processing"):
         typer.echo(f"Oopss: {error}")
         raise typer.Abort()
 
-    # Print the success message
-    typer.echo(f"{status.title()} orders after {date} downloaded!")
+    else:
+        # Print the success message
+        typer.echo(f"{status.title()} orders after {date} downloaded!")
 
 
 if __name__ == "__main__":
