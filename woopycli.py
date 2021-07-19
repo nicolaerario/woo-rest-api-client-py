@@ -25,6 +25,8 @@ defaultDate = date.today().strftime("%Y-%m-%dT00:00:00")
 
 @cli.command()
 def status():
+    """Show some server infos."""
+
     response = wcapi.get("system_status").json()
 
     woo_version = response["environment"]["version"]
@@ -44,6 +46,16 @@ def status():
 
 @cli.command()
 def shipToCsv(date: str = defaultDate, status: str = "processing"):
+    """
+    Export shippings with contact details to a CSV file.
+
+    --date : limit response to resources published after a given ISO8601 compliant date (yyyy-mm-ddThh:mm:ss).
+    Default is today at midnight.
+
+    --status : limit result set to orders assigned a specific status.
+     Options: any, pending, processing, on-hold, completed, cancelled, refunded, failed and trash. Default is processing.
+    """
+
     try:
 
         response = wcapi.get(
